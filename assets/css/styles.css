@@ -1,0 +1,208 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  /*
+      Blue: hsl(207, 90%, 61%)
+      Purple: hsl(250, 66%, 75%)
+      Pink: hsl(356, 66%, 75%)
+      Teal: hsl(174, 63%, 62%)
+  */
+
+  --hue: 207;
+  --sat: 90%;
+  --lig: 61%;
+  --first-color: hsl(var(--hue), var(--sat), var(--lig));
+  --first-color-alt: hsl(var(--hue), var(--sat), 57%); /* -4% */
+  --title-color: hsl(var(--hue), 12%, 15%);
+  --text-color: hsl(var(--hue), 12%, 45%);
+  --text-color-light: hsl(var(--hue), 8%, 75%);
+  --text-color-lighten: hsl(var(--hue), 8%, 92%);
+  --body-color: hsl(var(--hue), 100%, 99%);
+  --container-color: #fff;
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+}
+
+@media screen and (min-width: 968px) {
+  :root {
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+  transition: .3s; /* For animation dark mode */
+}
+
+h1, h2, h3 {
+  color: var(--title-color);
+  font-weight: 600;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+    max-width: 968px;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+  
+  .grid {
+    display: grid;
+    gap: 1.5rem;
+    
+  }
+  /*=============== Header ===============*/
+  .navbar{
+      display: flex;
+      justify-content:space-between;
+    }
+  .search_input{
+        display: none;
+    }
+  .icons{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .profile__perfile{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.profile__perfile img{
+    width: 20px;
+}
+.profile__border{
+    border: 3.5px solid var(--first-color);
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    margin-bottom: .75rem;   
+}
+.icon:hover{
+    color: #d6249f;
+}
+.profile{
+  margin:1rem;
+  background-color:#fff;
+  border-bottom: 1px solid lightgray;
+}
+.fillter-tab-active{
+  color: #d6249f;
+}
+
+  /*=============== FOOTER ===============*/
+.footer .box {
+    display:flex;
+    flex-direction:column;
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+/*================ BODY ===================*/
+.posts{
+  max-width: 968px;
+  padding: 1rem 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post {
+  width:inherit;
+  margin-bottom: 2rem;
+  padding: 10px;
+  
+  font-size: 1rem;
+
+  box-shadow: 0 0 10px black;
+}
+
+.post-header {
+  height: 60px;
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+  gap:10px;
+  padding:0 10px;
+}
+
+.post-header h2{
+  font-size: 1.3rem;
+}
+
+.post-image {
+  max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.profile-perfile{
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  border:thin black solid;
+  overflow:hidden;
+}
+
+.profile-perfile img {
+  width: 100%;
+  height: 100%;
+
+  object-fit:cover;
+}
+
+.post-comment{
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+.post-comment span {
+  color: lightseagreen;
+}
