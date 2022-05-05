@@ -127,9 +127,10 @@ img {
     color: #d6249f;
 }
 .profile{
-  margin:1rem;
-  background-color:#fff;
-  border-bottom: 1px solid lightgray;
+    padding: 1rem;
+    margin: auto;
+    background-color:#fff;
+    border-bottom: 1px solid lightgray;
 }
 .fillter-tab-active{
   color: #d6249f;
